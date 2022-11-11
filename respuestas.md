@@ -178,6 +178,47 @@ function conseguirTipoSuscripcion(suscripcion) {
 
 > 💡 Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays o objetos y un solo condicional. 😏
 
+**Como lo hice yo jeje**
+
+```
+
+function tipoDeSuscripcion(suscripcion){
+
+    const planesDeSuscripcion = {
+        free : "Solo puedes tomar los cursos gratis",   
+        basic : "Puedes tomar casi todos los cursos de Platzi durante un mes",
+        Expert: "Puedes tomar casi todos los cursos de Platzi durante un año",
+        ExpertDuo: "Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"
+    }
+
+    console.log(planesDeSuscripcion[suscripcion]);
+}
+
+/*O si no asi*/
+
+
+function tipoDeSuscripcion(suscripcion){
+
+
+   const planes = ["free", "Solo puedes tomar los cursos gratis", "basic","Puedes tomar casi todos los cursos de Platzi durante un mes","Expert","Puedes tomar casi todos los cursos de Platzi durante un año"]
+
+    for(let i = 0; i < planes.length ; i++){
+
+        if(suscripcion == planes[i]){
+            console.log(`tienes el plan ${suscripcion} y ${planes[i+1]}`)
+            return;
+        }
+    }
+        console.log("No existe el plan ingresado")
+  
+
+} 
+
+```
+
+
+
+**Como lo hizo el profe**
 ```
 const tiposDeSuscripciones = {
     free: 'Solo puedes tomar los cursos gratis',
